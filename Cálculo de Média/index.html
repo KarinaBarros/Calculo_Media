@@ -1,0 +1,44 @@
+<!Doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+			<title>Média</title>
+			<!--inserir css-->
+		</head>
+		<body>
+			<h1>Média do aluno</h1>
+			<h2>Preencha os campos e veja se foi aprovado!</h2>
+   
+   Nome: <input id="nomealuno" type="text">
+				<br/>
+   Primeira nota: <input id="nota1" type="number">
+					<br/>
+   Segunda  nota: <input id="nota2" type="number">
+						<br/>
+						<button onclick="media()">Calcular Média</button>
+					</body>
+				</html>
+				<script type="text/javascript">
+
+    function media(){
+     var nota1 = parseFloat(document.getElementById("nota1").value);
+     var nota2 = parseFloat(document.getElementById("nota2").value);
+	 var nome = document.getElementById("nomealuno").value;
+	 if (nome != ""){
+	 
+     if (nota1 >=0 && nota1 <=10 && nota2>=0 && nota2 <=10){
+	 var media=(nota1 + nota2)/ 2;
+	 if(media>= 6)
+       alert("Parabéns " +nome+ "Você foi aprovado. Sua média é: " +media+ " !")
+      else 
+       alert(nome+ " você foi reprovado. Sua média é: " +media+ " !" );
+     }
+	 else
+	 alert("insira uma nota de 0 a 10");
+    }
+	else
+	alert("Insira seu nome");
+    }
+ </script>
+					</head>
+				</html>
